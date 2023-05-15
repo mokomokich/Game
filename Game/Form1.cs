@@ -22,5 +22,22 @@ namespace Game
             if (e.KeyChar == (char)Keys.Escape)
                 this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
+            {
+                DataBank.TextBox1 = textBox1.Text;
+                DataBank.TextBox2 = textBox2.Text;
+                DataBank.TextBox3 = textBox3.Text;
+                Form2 newForm = new Form2();
+                newForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Введите имена игроков или число");
+                
+            }
+        }
     }
 }
